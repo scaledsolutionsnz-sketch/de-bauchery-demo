@@ -692,7 +692,6 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
 /* ---------- Responsive ---------- */
 @media (min-width: 640px) {
   .svc-grid, .crew-grid, .rev-grid, .rate-grid, .step-grid { grid-template-columns: repeat(2, 1fr); }
-  .cc-buttons { grid-template-columns: 1fr 1fr; }
   .hero-scroll { display: block; }
 }
 
