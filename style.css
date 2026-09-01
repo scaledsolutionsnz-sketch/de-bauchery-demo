@@ -729,9 +729,3 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
   .hero-slide { transform: none; }
 }
 
-/* ---------- Step inside (360 + photos) ---------- */
-.inside-pano { border-radius: var(--radius); overflow: hidden; margin-top: 1.8rem; border: 1px solid var(--line); }
-.inside-pano iframe { width: 100%; height: clamp(340px, 52vh, 520px); border: 0; display: block; }
-.inside-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
-.inside-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
-@media (max-width: 900px) { .inside-grid { grid-template-columns: repeat(2, 1fr); } }
