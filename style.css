@@ -5,15 +5,15 @@
    ========================================================================== */
 
 :root {
-  --bone: #EFEADC;
-  --cream: #FBF8F1;
-  --ink: #191C15;
-  --ink-2: #232719;
+  --bone: #EFEFDF;
+  --cream: #FAF9EF;
+  --ink: #16170e;
+  --ink-2: #1f2113;
   --body: #33372B;
   --muted: #6E7362;
-  --olive: #4E5D3F;
-  --olive-deep: #3C4830;
-  --olive-lt: #A9BE85;
+  --olive: #565b1c;
+  --olive-deep: #3f4413;
+  --olive-lt: #b9bf68;
   --line: rgba(25, 28, 21, 0.12);
   --line-dk: rgba(244, 240, 230, 0.16);
   --radius: 14px;
@@ -146,13 +146,14 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: var(--ink);
+  background: #000;
   display: grid;
   place-items: center;
   transition: opacity 0.75s var(--ease), visibility 0.75s;
 }
 #curtain.done { opacity: 0; visibility: hidden; pointer-events: none; }
 .curtain-mark { text-align: center; padding: 0 24px; }
+.curtain-logo { width: min(420px, 74vw); height: auto; margin: 0 auto 0.9rem; display: block; }
 .curtain-mark .cm-kicker,
 .curtain-mark .cm-sub {
   font-size: 0.66rem;
@@ -727,3 +728,10 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
   .rv { opacity: 1; transform: none; }
   .hero-slide { transform: none; }
 }
+
+/* ---------- Step inside (360 + photos) ---------- */
+.inside-pano { border-radius: var(--radius); overflow: hidden; margin-top: 1.8rem; border: 1px solid var(--line); }
+.inside-pano iframe { width: 100%; height: clamp(340px, 52vh, 520px); border: 0; display: block; }
+.inside-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 12px; }
+.inside-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
+@media (max-width: 900px) { .inside-grid { grid-template-columns: repeat(2, 1fr); } }
