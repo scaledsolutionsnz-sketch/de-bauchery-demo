@@ -146,7 +146,7 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: #000;
+  background: var(--ink);
   display: grid;
   place-items: center;
   transition: opacity 0.75s var(--ease), visibility 0.75s;
