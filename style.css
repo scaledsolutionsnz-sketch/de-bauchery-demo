@@ -157,10 +157,13 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
 .farm-partners .partner-links { margin-top: 1.35rem; }
 .farm-partners { padding: clamp(2.8rem, 6vw, 4.5rem) 0; }
 .farm-partners .split { align-items: start; }
+.partner-stack { display: grid; gap: .8rem; }
 .farm-badge { background: var(--ink); border-radius: 18px; padding: clamp(1.4rem, 4vw, 3rem); display: grid; place-items: center; text-align: center; box-shadow: 0 18px 36px rgba(25,28,21,.18); }
 .farm-badge img { width: min(100%, 360px); height: auto; }
 .farm-badge p { color: var(--bone); margin: .8rem 0 0; font-weight: 600; }
-.partner-logos { display: grid; gap: 1rem; width: 100%; }
+.partner-stack .farm-badge { padding: .65rem 1rem; }
+.partner-stack .farm-badge img { width: min(100%, 250px); }
+.partner-logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; width: 100%; }
 .partner-logo { display: grid; place-items: center; min-height: 96px; padding: .55rem 1rem; border-radius: 14px; background: var(--bone); transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
 .partner-logo:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0,0,0,.2); }
 .partner-logo img { width: min(100%, 300px); max-height: 70px; object-fit: contain; }
