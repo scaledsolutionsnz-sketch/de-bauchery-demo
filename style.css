@@ -755,3 +755,30 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
 .cut-sheet-note p:not(.eyebrow) { max-width: 58ch; color: var(--muted); font-size: .92rem; }
 .cut-sheet-note .btn { flex: none; }
 @media (max-width: 700px) { .cut-sheet-note { display: block; } .cut-sheet-note .btn { margin-top: 1rem; } }
+
+/* FAQ */
+.faq-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.faq .sec-head { position: sticky; top: 110px; margin-bottom: 0; }
+.faq .sec-head .eyebrow { color: var(--olive); }
+.faq .sec-head .eyebrow::before { background: var(--olive); }
+.faq .sec-head .lede { color: var(--muted); }
+.faq .sec-head a { color: var(--olive-deep); font-weight: 600; }
+.faq-list { border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding: 1.3rem 0; font-weight: 600; font-size: 1.08rem; color: var(--ink); line-height: 1.35; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--olive-deep); }
+.faq-item summary:focus-visible { outline: 2px solid var(--olive); outline-offset: 4px; border-radius: 4px; }
+.faq-ico { position: relative; flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); transition: background .25s var(--ease), border-color .25s var(--ease); }
+.faq-ico::before, .faq-ico::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.75px; background: var(--ink); transform: translate(-50%, -50%); transition: transform .3s var(--ease), opacity .3s var(--ease); }
+.faq-ico::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq-item[open] .faq-ico { background: var(--olive); border-color: var(--olive); }
+.faq-item[open] .faq-ico::before, .faq-item[open] .faq-ico::after { background: var(--cream); }
+.faq-item[open] .faq-ico::after { transform: translate(-50%, -50%) rotate(90deg) scaleX(0); }
+.faq-a { padding: 0 3.5rem 1.4rem 0; color: var(--body); max-width: 62ch; }
+.faq-a a { color: var(--olive-deep); font-weight: 600; }
+@media (max-width: 860px) {
+  .faq-grid { grid-template-columns: 1fr; }
+  .faq .sec-head { position: static; }
+  .faq-a { padding-right: 0; }
+}
