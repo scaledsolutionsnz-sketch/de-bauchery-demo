@@ -799,3 +799,31 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
 .gal-box img { display: block; max-width: 94vw; max-height: 92vh; border-radius: var(--radius-sm); }
 .gal-close { position: absolute; top: -14px; right: -14px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--bone); color: var(--ink); font-size: 1.6rem; line-height: 1; cursor: pointer; }
 @media (max-width: 560px) { .gal-grid { columns: 2; column-gap: 8px; } .gal-item { margin-bottom: 8px; } .gal-close { top: 6px; right: 6px; } }
+
+/* Homekill page: photo header */
+.page-head--photo { position: relative; overflow: hidden; isolation: isolate; }
+.page-head--photo .ph-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; z-index: -2; filter: saturate(0.85) contrast(1.05); }
+.page-head--photo::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(100deg, rgba(22, 23, 14, .94) 0%, rgba(22, 23, 14, .82) 45%, rgba(22, 23, 14, .45) 100%); }
+.inline-link { color: var(--olive); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Homekill cut sheet forms */
+.cs-grid { display: grid; gap: 1.1rem; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .cs-grid { grid-template-columns: repeat(3, 1fr); } }
+.cs-card { display: flex; flex-direction: column; background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+.cs-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.cs-card:focus-visible { outline: 2px solid var(--olive); outline-offset: 3px; }
+.cs-thumb { background: #fff; aspect-ratio: 4 / 3; overflow: hidden; border-bottom: 1px solid var(--line); }
+.cs-thumb img { width: 100%; height: auto; display: block; }
+.cs-body { padding: 1.15rem 1.25rem 1.3rem; }
+.cs-body h3 { margin-bottom: .3rem; }
+.cs-body p { color: var(--muted); font-size: .92rem; }
+.cs-dl { display: inline-flex; align-items: center; gap: .45rem; margin-top: .85rem; color: var(--olive); font-weight: 600; font-size: .92rem; }
+.cs-dl svg { width: 17px; height: 17px; }
+
+/* Homekill photo strip */
+.photo-strip { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 900px) { .photo-strip { grid-template-columns: repeat(4, 1fr); } }
+.photo-strip .gal-item { margin: 0; aspect-ratio: 4 / 5; }
+.photo-strip .gal-item img { height: 100%; object-fit: cover; }
+.strip-more { margin-top: 1.4rem; }
+.cs-card, .cs-card:hover { text-decoration: none; color: inherit; }
