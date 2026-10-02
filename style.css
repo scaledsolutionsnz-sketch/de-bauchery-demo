@@ -782,3 +782,20 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
   .faq .sec-head { position: static; }
   .faq-a { padding-right: 0; }
 }
+
+/* Cut sheet downloads */
+.cut-sheet-dl { display: flex; flex-wrap: wrap; gap: .6rem; flex: none; }
+.cut-sheet-dl .btn svg { width: 16px; height: 16px; }
+@media (max-width: 700px) { .cut-sheet-dl { margin-top: 1rem; } .cut-sheet-dl .btn { flex: 1 1 100%; justify-content: center; } }
+
+/* Gallery */
+.gal-grid { columns: 4 240px; column-gap: 12px; }
+.gal-item { display: block; margin-bottom: 12px; border-radius: var(--radius-sm); overflow: hidden; break-inside: avoid; position: relative; }
+.gal-item img { width: 100%; height: auto; display: block; transition: transform .5s var(--ease), filter .3s ease; filter: saturate(0.9) contrast(1.04); }
+.gal-item:hover img { transform: scale(1.04); filter: none; }
+.gal-item:focus-visible { outline: 2px solid var(--olive-lt); outline-offset: 3px; }
+.gal-box { border: 0; padding: 0; background: transparent; max-width: 94vw; max-height: 92vh; overflow: visible; }
+.gal-box::backdrop { background: rgba(10, 11, 7, .9); }
+.gal-box img { display: block; max-width: 94vw; max-height: 92vh; border-radius: var(--radius-sm); }
+.gal-close { position: absolute; top: -14px; right: -14px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--bone); color: var(--ink); font-size: 1.6rem; line-height: 1; cursor: pointer; }
+@media (max-width: 560px) { .gal-grid { columns: 2; column-gap: 8px; } .gal-item { margin-bottom: 8px; } .gal-close { top: 6px; right: 6px; } }

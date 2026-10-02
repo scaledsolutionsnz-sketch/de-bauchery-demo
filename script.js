@@ -116,4 +116,20 @@
   document.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
+
+  // Gallery viewer
+  var box = document.getElementById("galBox");
+  if (box && box.showModal) {
+    var bimg = box.querySelector("img");
+    document.querySelectorAll("a[data-gal]").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        var im = a.querySelector("img");
+        bimg.src = a.getAttribute("href"); bimg.alt = im ? im.alt : "";
+        box.showModal();
+      });
+    });
+    box.querySelector(".gal-close").addEventListener("click", function () { box.close(); });
+    box.addEventListener("click", function (e) { if (e.target === box) box.close(); });
+  }
 })();
