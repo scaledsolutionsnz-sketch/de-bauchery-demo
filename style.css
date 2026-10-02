@@ -831,3 +831,7 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
 /* Service cards: portrait boxes sized to the shop's own photos, no dead space */
 .svc .shot { aspect-ratio: 4 / 5; }
 .svc .shot img { object-fit: cover; filter: none; }
+/* Cut sheets: bigger download button on each card */
+.cs-dl { margin-top: 1rem; padding: .7rem 1.1rem; border-radius: 999px; background: var(--olive); color: var(--bone); }
+.cs-card:hover .cs-dl { background: var(--olive-deep); }
+.cs-thumb { aspect-ratio: 3 / 2.6; }
