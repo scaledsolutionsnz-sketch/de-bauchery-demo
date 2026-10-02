@@ -827,3 +827,9 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
 .photo-strip .gal-item img { height: 100%; object-fit: cover; }
 .strip-more { margin-top: 1.4rem; }
 .cs-card, .cs-card:hover { text-decoration: none; color: inherit; }
+
+/* Service cards: show the whole original photo, blurred fill behind */
+.svc .shot { aspect-ratio: 4 / 3; isolation: isolate; }
+.svc .shot::before { content: ""; position: absolute; inset: -20px; background: var(--bg) center / cover no-repeat; filter: blur(18px) brightness(0.55); z-index: -1; }
+.svc .shot img { object-fit: contain; filter: none; }
+.svc:hover .shot img { transform: scale(1.02); }
