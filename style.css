@@ -835,3 +835,4 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
 .cs-dl { margin-top: 1rem; padding: .7rem 1.1rem; border-radius: 999px; background: var(--olive); color: var(--bone); }
 .cs-card:hover .cs-dl { background: var(--olive-deep); }
 .cs-thumb { aspect-ratio: 3 / 2.6; }
+.fine-print { margin-top: .55rem; font-size: .8rem; color: var(--muted); font-style: italic; }
