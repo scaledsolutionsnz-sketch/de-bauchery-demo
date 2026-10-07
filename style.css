@@ -729,7 +729,7 @@ section { padding: clamp(3.5rem, 9vw, 6.5rem) 0; }
 }
 
 @media (min-width: 1100px) {
-  .rev-grid { grid-template-columns: repeat(4, 1fr); }
+  .rev-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (prefers-reduced-motion: reduce) {
